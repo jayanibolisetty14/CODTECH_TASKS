@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Learning Platform UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 E-Learning Platform</h1>
+</header>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('courses')">Courses</button>
+  <button onclick="showPage('profile')">Profile</button>
+</nav>
+
+
+<section class="page" id="home">
+  <h2>Welcome 👋</h2>
+  <p>Continue your learning journey with our interactive courses.</p>
+</section>
+
+
+<section class="page" id="courses">
+  <h2>Available Courses</h2>
+
+  <div class="course-card" onclick="openCourse('HTML Basics', 70)">
+    <h3>HTML Basics</h3>
+    <p>Learn structure of web pages.</p>
+  </div>
+
+  <div class="course-card" onclick="openCourse('CSS Styling', 40)">
+    <h3>CSS Styling</h3>
+    <p>Make websites beautiful.</p>
+  </div>
+
+  <div class="course-card" onclick="openCourse('JavaScript Essentials', 20)">
+    <h3>JavaScript Essentials</h3>
+    <p>Make websites interactive.</p>
+  </div>
+</section>
+
+
+<section class="page" id="coursePage">
+  <button class="back" onclick="showPage('courses')">⬅ Back</button>
+  <h2 id="courseTitle"></h2>
+
+  <h3>Learning Video</h3>
+  <iframe id="videoFrame" src="https://www.youtube.com/embed/HD13eq_Pmp8"
+          title="video" frameborder="0" allowfullscreen></iframe>
+
+  <h3>Progress</h3>
+  <div class="progress">
+    <div id="progressBar"></div>
+  </div>
+</section>
+
+<section class="page" id="profile">
+  <h2>Your Profile</h2>
+  <p>Name: jaya</p>
+  <p>Completed Courses: 2</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
